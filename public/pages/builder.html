@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- This meta tag ensures that the website renders correctly across different device sizes, enhancing mobile responsiveness. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+
+<nav id="main-nav" class="topnav">
+    <a href="/">Home</a>
+    <a href="builder.html">List Builder</a>
+    <a href="products.html">PC Parts</a>
+    <a href="guides.html">Guides</a>
+    <a href="benchmarks.html">Benchmarks</a>
+    <a href="retailers.html">Retailers</a>
+    <a href="manufacturer.html">Manufacturers</a>
+    <a href="sell.html">Market</a>
+    <a href="compatibility.html">Compatibility</a>
+    <a href="user.html">User</a>
+    <a href="/pages/productsinfo.html">PC Parts Info</a>
+</nav>
+
+<body>
+    <div id="root">
+        <h1>PC Builder Page</h1>
+    </div>
+
+    <h2>List of available Lists</h2>
+    <table id="listOfListIDs" border="1">
+        <thead>
+            <tr>
+                <th>List ID</th>
+                <th>Build Name</th>
+                <th>Made By</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <br>
+    <hr><br> <!-- ========================================================================= -->
+
+    <h2> Look Up PC Parts List</h2>
+
+    <form id="pcPartsListIDForm">
+        ID: <input type="number" id="insertListId" placeholder="Select Existing ID" required> <br><br>
+        <button type="submit"> Search </button> <br>
+    </form>
+    <div id="loadListResultMsg"></div>
+
+    <br>
+
+    <table id="pcPartsList" border="1">
+        <thead>
+            <tr>
+                <!--Table head, need to be adjusted accordingly to align with your own.-->
+                <th>Part ID</th>
+                <th>Name</th>
+                <th>Model #</th>
+                <th>Rating</th>
+                <th>Manufacturer ID</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <h2> Insert PC Part To List</h2>
+    <form id="pcPartsListInsertForm">
+        ID: <input type="number" id="insertPartId" placeholder="Part ID to be added" required> <br><br>
+        <button type="submit"> Insert </button> <br>
+    </form>
+    <div id="insertPcPartResultMessage"></div>
+
+    <h2> Delete PC Part From List</h2>
+    <form id="pcPartsListDeleteform">
+        ID: <input type="number" id="deletePartID" placeholder="ID to be deleted" required> <br><br>
+        <button type="submit"> Delete </button> <br>
+    </form>
+    <div id="deletePcPartResultMessage"></div>
+
+    <!-- ===================================================================================== -->
+    <!-- External JavaScript file that contains the functionality/logic for the operations above. -->
+    <script src="../js/builder.js"></script>
+</body>
+
+</html>
